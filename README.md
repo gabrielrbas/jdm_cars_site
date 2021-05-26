@@ -1,6 +1,6 @@
 <h1 align="center">JDM Cars Site</h1>
 
-![jdmcars]()
+![jdmcars](https://github.com/gabrielrbas/jdm_cars_site/blob/main/jdm.gif)
 
 ## 📜 SOBRE
 
