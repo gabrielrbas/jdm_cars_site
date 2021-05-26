@@ -3,7 +3,14 @@ from .models import Pics
 
 
 def index(request):
-    pic = Pics.objects.all()
+    pics = Pics.objects.all()
     return render(request, 'gallery/index.html', {
+        'pics': pics
+    })
+
+
+def pic_view(request, pic_id):
+    pic = Pics.objects.get(id=pic_id)
+    return render(request, 'gallery/pic_view.html', {
         'pic': pic
     })
