@@ -1,5 +1,7 @@
 <h1 align="center">JDM Cars Site</h1>
 
+![jdmcars](https://github.com/gabrielrbas/jdm_cars_site/blob/main/jdmcars.gif)
+
 ## 📜 SOBRE
 
 Esse é um projeto pessoal simples em Django com o propósito de colocar em prática o conhecimento adquirido. 
