@@ -3,14 +3,14 @@
 {%block content%}
 <section class="py-5 text-center container">
     <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Pictures Of Stunning JDM Cars</h1>
-        <p class="lead text-muted">Let's take a look at some examples of the most stunning JDM cars.</p>
-        <p>
-          <a href="#" class="btn btn-primary my-2">Main call to action</a>
-          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-        </p>
-      </div>
+        <div class="container">
+            <h1 class="fw-light">{{pic.name}}</h1>
+            <img class="card-img-top" src="{{pic.source.url}}" alt="Card image cap" style="max-width: 100%; height: auto;">
+            <p>
+                <a href="{%url 'index'%}" class="btn btn-primary my-2">Back</a>
+                <a class="btn btn-primary my-2" href="{{pic.source.url}}" download="">Download</a>
+            </p>
+        </div>
     </div>
-  </section>
+</section>
 {%endblock%}

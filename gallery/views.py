@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Pics
 
 
@@ -10,7 +10,7 @@ def index(request):
 
 
 def pic_view(request, pic_id):
-    pic = Pics.objects.get(id=pic_id)
+    pic = get_object_or_404(Pics, id=pic_id)
     return render(request, 'gallery/pic_view.html', {
         'pic': pic
     })

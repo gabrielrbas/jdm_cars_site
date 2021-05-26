@@ -1,21 +1,36 @@
 {%extends 'base.html'%}
 
 {%block content%}
-{%for car in pics%}
-<div class="col">
-  <div class="card shadow-sm">
-    <img src="{{car.source.url}}" style="max-width: auto; height: 250px;">
-    <div class="card-body">
-      <p class="card-text">{{car.name}}</p>
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="btn-group">
-          <a class="btn btn-sm btn-outline-secondary" href="{%url 'pic_view' car.id %}">View</a>
-          <a class="btn btn-sm btn-outline-secondary" href="{{car.source.url}}" download="">Download</a>
+<section class="py-5 text-center container">
+  <div class="row py-lg-5">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <h1 class="fw-light">Pictures Of Stunning JDM Cars</h1>
+      <p class="lead text-muted">Let's take a look at some examples of the most stunning JDM cars.</p>
+    </div>
+  </div>
+</section>
+
+<div class="album py-5 bg-light">
+  <div class="container">
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      {%for car in pics%}
+      <div class="col">
+        <div class="card shadow-sm">
+          <img class="img-thumbnail" src="{{car.source.url}}" style="max-width: auto; height: 250px;">
+          <div class="card-body">
+            <p class="card-text">{{car.name}}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a class="btn btn-primary my-2" href="{%url 'pic_view' car.id %}">View</a>
+              </div>
+              <small class="text-muted">{{car.date|date:'d/m/Y'}}</small>
+            </div>
+          </div>
         </div>
-        <small class="text-muted">{{car.date|date:'d/m/Y'}}</small>
       </div>
+      {%endfor%}        
     </div>
   </div>
 </div>
-{%endfor%}
 {%endblock%}
